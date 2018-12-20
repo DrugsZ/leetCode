@@ -6,6 +6,9 @@
   "scripts": {
     "test": "jest"
   },
+  "pre-commit": [
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DrugsZ/leetCode.git"
@@ -18,5 +21,8 @@
   "homepage": "https://github.com/DrugsZ/leetCode#readme",
   "dependencies": {
     "jest": "^23.6.0"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
   }
 }
