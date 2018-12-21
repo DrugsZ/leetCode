@@ -33,7 +33,7 @@
  * @param {number[]} nums
  */
 var NumArray = function(nums) {
-    this.nums = [nums.length + 1];
+    this.nums = [];
     this.nums[0] = 0
     let num = 0;
     nums.forEach((item,index) => {
