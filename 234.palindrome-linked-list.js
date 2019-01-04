@@ -82,3 +82,8 @@ var isPalindrome = function(head) {
 
   return !head && !resver;
 };
+
+
+module.exports = {
+  isPalindrome
+}
