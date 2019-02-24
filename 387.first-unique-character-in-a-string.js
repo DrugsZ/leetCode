@@ -33,6 +33,7 @@
  * @return {number}
  */
 var firstUniqChar = function(s) {
+  if(!s.length)return -1
   let results = new Map();
 
   let len = s.length;
@@ -40,19 +41,18 @@ var firstUniqChar = function(s) {
   
   while (i < len) {
     if(!results.has(s[i])){
-      results.set(s[i],0)
+      results.set(s[i],1)
     }else{
       results.set(s[i],results.get(s[i])+1)
     }
     i++
   };
   
-  let j = 0;
-  for (const value of results.values()) {
-    if(value === 0){
-      return j
+  for (const [key,value] of results.entries()) {
+    if(value === 1){
+      return s.indexOf(key)
     }
-    j++
   }
-  return results
+
+  return -1
 };
