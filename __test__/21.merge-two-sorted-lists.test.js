@@ -18,3 +18,10 @@ test('test no l1', () => {
   let l2 = arr2List([1,3,5]);
   expect(mergeTwoLists(l1,l2)).toEqual(l2);
 });
+
+
+test('test l1 start > l2 start', () => {
+  let l1 = arr2List([2,4,6]);
+  let l2 = arr2List([1,3,5]);
+  expect(mergeTwoLists(l1,l2)).toEqual(arr2List([1,2,3,4,5,6]));
+});
