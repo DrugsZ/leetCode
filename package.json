@@ -4,7 +4,7 @@
   "description": "",
   "main": "1.two-sum.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "pre-commit": [
     "test"
@@ -23,6 +23,12 @@
     "jest": "^23.6.0"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
     "pre-commit": "^1.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
