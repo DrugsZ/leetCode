@@ -62,3 +62,36 @@ var isSymmetricHelp = function(left,right){
   return isSymmetricHelp(left.left,right.right) && isSymmetricHelp(left.right, right.left)
 }
 
+
+var isSymmetricByIteration = function(root) {
+  if (!root) {
+    return true;
+  }
+
+  let qLeft = [root.left];
+  let qRight = [root.right];
+
+  while (qLeft.length || qRight.length) {
+    let left = qLeft.shift();
+    let right  = qRight.shift();
+
+    if (!left && !right) {
+      continue;
+    }
+
+    if (!left || !right) {
+      return false;
+    }
+
+    if(left.val !== right.val){
+      return false;
+    }
+
+    qLeft.push(left.left);
+    qRight.push(right.right);
+    qLeft.push(left.right);
+    qRight.push(right.left);
+  }
+
+  return !qLeft.length && !qRight.length
+};
