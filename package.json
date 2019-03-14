@@ -4,9 +4,11 @@
   "description": "",
   "main": "1.two-sum.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "lint": "eslint * -o eslint.html -f html || true"
   },
   "pre-commit": [
+    "lint",
     "test"
   ],
   "repository": {
@@ -24,6 +26,9 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
     "pre-commit": "^1.2.2"
   },
   "config": {
