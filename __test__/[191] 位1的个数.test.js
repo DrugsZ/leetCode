@@ -5,4 +5,3 @@ test('汉明重量', () => {
   expect(hammingWeight(2097152)).toBe(1);
   expect(hammingWeight(-3)).toBe(31);
 });
-
