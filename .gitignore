@@ -1,2 +1,5 @@
 node_modules/
 coverage/
+eslint.html
+yarn.lock
+package-lock.json
