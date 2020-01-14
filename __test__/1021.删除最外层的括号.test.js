@@ -1,4 +1,4 @@
-const removeOuterParentheses = require('../1021.删除最外层的括号');
+const { removeOuterParentheses } = require('../1021.删除最外层的括号');
 
 describe('删除最外层的括号', () => {
   test('should output ture', () => {
