@@ -51,6 +51,6 @@ const swapPairsByRecursion = (head) => {
   const cache = next.next;
   next.next = head;
   head.next = swapPairsByRecursion(cache);
-  return next;
+  return next;  
 };
 // @lc code=end
